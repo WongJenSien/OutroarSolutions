@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outroar Solutions</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Your Custom CSS (Must be LAST) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <!-- IMPORTANT: Make sure your logo file is named 'logo.svg' or change the path here -->
+                    <img src="icon/logo.svg" alt="Outroar Solutions Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <!-- <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li> -->
+                        <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Body Conten -->
+    <main>
+        <!-- ============================================ -->
+        <!--                  HERO SECTION                -->
+        <!-- ============================================ -->
+        <section id="hero" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="display-3 fw-bolder" style="text-shadow: 2.5px 2.5px #663300;">YOUTH MARKETING MALAYSIA</h1>
+                        <p class="lead my-4">
+                            School Sampling & Brand Activations That Actually Connect 🚀
+                        </p>
+                        <p class="lead my-4">Government-approved campaigns reaching 50,000+ students across Malaysia's schools, hospitals, and youth events.
+                        </p>
+
+                        <!-- <a href="" class="btn btn-primary btn-lg me-2 mb-2 mb-md-0">Start Your Campaign</a> -->
+                        <button type="button" class="btn btn-primary btn-lg me-2 mb-2 mb-md-0" data-bs-toggle="modal" data-bs-target="#campaignModal">
+                            Start Your Campaign
+                        </button>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <img src="icon/tiger.png" alt="logo" class="img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!--            CAMPAIGN POPUP MODAL              -->
+        <!-- ============================================ -->
+        <div class="modal fade" id="campaignModal" tabindex="-1" aria-labelledby="campaignModalLabel" aria-hidden="true">
+            <!-- <div class="modal-dialog modal-lg modal-dialog-centered"> Added modal-lg for more space -->
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- The header is now empty, but we keep the close button -->
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        
+                        <!-- Main Headline -->
+                        <h2 class="display-5 fw-bold mb-3 text-white">
+                            <span class="me-2">🏐</span> Reach 50,000 Students This October
+                        </h2>
+
+                        <!-- Event Title -->
+                        <h4 class="fw-bold text-white">Jelajah Dodgeball Belia 2025</h4>
+                        
+                        <!-- Description -->
+                        <p class="lead my-4">
+                            Government-endorsed nationwide school tour hitting 40 secondary schools across 5 states. Your brand becomes part of the game - literally.
+                        </p>
+
+                        <!-- Stats Grid -->
+                        <div class="row g-3 my-4">
+                            <div class="col-lg-3 col-6">
+                                <div class="stat-card h-100">
+                                    <p class="display-5 fw-bold">50,000+</p>
+                                    <p class="small">Students Reached</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="stat-card h-100">
+                                    <p class="display-5 fw-bold">40</p>
+                                    <p class="small">Schools Nationwide</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="stat-card h-100">
+                                    <p class="display-5 fw-bold">5</p>
+                                    <p class="small">Key States</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="stat-card h-100">
+                                    <p class="display-5 fw-bold">RM40K</p>
+                                    <p class="small">All-In Investment</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer Details -->
+                        <p class="small">
+                            <strong class="fw-bold">Ready-to-go dates starting October 13, 2025.</strong>
+                        </p>
+                        <p class="small text-black-50 text-muted">
+                            Custom-branded dodgeball games • Nationwide logistics • JPN pre-approved • Limited to 8 brands only
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================ -->
+        <!--            INTRODUCTION SECTION              -->
+        <!-- ============================================ -->
+        <section id="introduction" class="py-5 bg-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="fw-bold mb-4">Malaysia's Leading Youth Marketing Agency</h2>
+                        <p class="lead text-muted">
+                            With 20+ years of combined expertise in youth marketing, school sampling, and brand activations, we're Malaysia's trusted partner for reaching the next generation. We specialize in government-approved school programs, hospital outreach, and experiential marketing that creates lasting brand connections.
+                        </p>
+                        <p class="lead text-muted">
+                            From kindergarten edutainment to secondary school sports day activations, we deliver authentic youth engagement through strategic sampling campaigns, educational workshops, and memorable brand experiences that turn first-time encounters into lifelong brand loyalty.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!--              SERVICES SECTION                -->
+        <!-- ============================================ -->
+        <section id="services" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Youth Marketing Services Malaysia</h2>
+                </div>
+                <div class="row g-4">
+                    
+                    <!-- Card One - School Sampling and Activations -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 text-center custom-card">
+                            <div class="card-body p-4 p-lg-5">
+                                <!-- <i class="fas fa-code fa-3x text-primary mb-4"></i> -->
+                                <p class="display-4">🚸</p>
+                                <h3 class="card-title fw-bold">School Sampling & Activations</h3>
+                                <p class="card-text">
+                                    Government-approved school programs including kindergarten edutainment, secondary school brand activations, and educational workshops. Direct access to students with full JPN coordination and school liaison support.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Two - Hospital & Mothers Outreach -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 text-center custom-card">
+                            <div class="card-body p-4 p-lg-5">
+                                <!-- <i class="fas fa-pen-ruler fa-3x text-primary mb-4"></i> -->
+                                <p class="display-4">🏥</p>
+                                <h3 class="card-title fw-bold">Hospital & Mothers Outreach</h3>
+                                <p class="card-text">
+                                    Strategic hospital sampling targeting new mothers, families, and patients. Build trust through product trials in healthcare environments with established partnerships across Malaysia's leading medical centers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Three - School Sports Day Marketing -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 text-center custom-card">
+                            <div class="card-body p-4 p-lg-5">
+                                <!-- <i class="fas fa-bullhorn fa-3x text-primary mb-4"></i> -->
+                                <p class="display-4">🏆</p>
+                                <h3 class="card-title fw-bold">School Sports Day Marketing</h3>
+                                <p class="card-text">
+                                    Transform school sports days, carnivals, and youth events into powerful brand experiences. Custom activations that integrate seamlessly with school events while creating positive brand associations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Four - Private School Sampling -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 text-center custom-card">
+                            <div class="card-body p-4 p-lg-5">
+                                <!-- <i class="fas fa-bullhorn fa-3x text-primary mb-4"></i> -->
+                                <p class="display-4">🎯</p>
+                                <h3 class="card-title fw-bold">Private School Sampling</h3>
+                                <p class="card-text">
+                                    Exclusive access to private and international schools across Malaysia. Targeted distribution campaigns for premium brands looking to reach affluent families and young consumers in controlled environments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!--                WHY-US SECTION                -->
+        <!-- ============================================ -->
+        <section id="why-us" class="py-5">
+            <div class="container text-center">
+                <!-- Section Heading -->
+                <h2 class="display-5 fw-bold mb-5">Why Brands Love Us</h2>
+
+                <!-- Stats Row -->
+                <div class="row mb-5">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <p class="display-3 fw-bolder">20+</p>
+                        <p class="lead">Years Experience</p>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <p class="display-3 fw-bolder">100K+</p>
+                        <p class="lead">Samples Distributed</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="display-3 fw-bolder">13</p>
+                        <p class="lead">States Covered</p>
+                    </div>
+                </div>
+
+                <!-- Client Logos Area -->
+                <h4 class="fw-bold mb-4">Trusted by Industry Giants</h4>
+                
+                <!-- Client Logo Cards -->
+                <!-- <div class="row g-4 justify-content-center">
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="client-card">
+                            <img src="icon/logo_Nestlé.svg" alt="Nestlé Logo" class="client-logo-img">
+                            <p class="client-name mt-3 fw-bold">Nestlé</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="client-card">
+                            <img src="icon/logo_YUKAZAN.webp" alt="Yukazan Logo" class="client-logo-img">
+                            <p class="client-name mt-3 fw-bold">Yukazan</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="client-card">
+                            <img src="icon/logo_Yeo's.png" alt="Yeo's Logo" class="client-logo-img">
+                            <p class="client-name mt-3 fw-bold">Yeo's</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="client-card">
+                            <img src="icon/logo_Meiji.png" alt="Meiji Logo" class="client-logo-img">
+                            <p class="client-name mt-3 fw-bold">Meiji</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="client-card">
+                            <img src="icon/logo_KPJ_Hospital.png" alt="KPJ Hospital Logo" class="client-logo-img">
+                            <p class="client-name mt-3 fw-bold">KPJ Hospital</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="client-card">
+                            <img src="icon/logo_Pantai_Hospitals.webp" alt="Pantai Hospitals Logo" class="client-logo-img">
+                            <p class="client-name mt-3 fw-bold">Pantai Hospitals</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="client-card">
+                            <img src="icon/logo_Brainy_Bunch.png" alt="Brainy Bunch Logo" class="client-logo-img">
+                            <p class="client-name mt-3 fw-bold">Brainy Bunch</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="client-card">
+                            <img src="icon/logo_Qdess.png" alt="Qdees Logo" class="client-logo-img">
+                            <p class="client-name mt-3 fw-bold">Qdees</p>
+                        </div>
+                    </div>
+
+                </div> -->
+
+                <!-- Swiper Container -->
+                <div class="swiper client-swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="client-card">
+                                <img src="icon/logo_Nestlé.svg" alt="Nestlé Logo" class="client-logo-img">
+                                <p class="client-name mt-3 fw-bold">Nestlé</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client-card">
+                                <img src="icon/logo_YUKAZAN.webp" alt="Yukazan Logo" class="client-logo-img">
+                                <p class="client-name mt-3 fw-bold">Yukazan</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client-card">
+                                <img src="icon/logo_Yeo's.png" alt="Yeo's Logo" class="client-logo-img">
+                                <p class="client-name mt-3 fw-bold">Yeo's</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client-card">
+                                <img src="icon/logo_Meiji.png" alt="Meiji Logo" class="client-logo-img">
+                                <p class="client-name mt-3 fw-bold">Meiji</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client-card">
+                                <img src="icon/logo_KPJ_Hospital.png" alt="KPJ Hospital Logo" class="client-logo-img">
+                                <p class="client-name mt-3 fw-bold">KPJ Hospital</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client-card">
+                                <img src="icon/logo_Pantai_Hospitals.webp" alt="Pantai Hospitals Logo" class="client-logo-img">
+                                <p class="client-name mt-3 fw-bold">Pantai Hospitals</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client-card">
+                                <img src="icon/logo_Brainy_Bunch.png" alt="Brainy Bunch Logo" class="client-logo-img">
+                                <p class="client-name mt-3 fw-bold">Brainy Bunch</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client-card">
+                                <img src="icon/logo_Qdess.png" alt="Qdees Logo" class="client-logo-img">
+                                <p class="client-name mt-3 fw-bold">Qdees</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!--             SECRET-SAUCE SECTION             -->
+        <!-- ============================================ -->
+        <section id="secret-sauce" class="py-5">
+            <div class="container">
+                <!-- Section Heading -->
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">Our Secret Sauce</h2>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="row g-5">
+                    <!-- Item 1: Honest Collaborations -->
+                    <div class="col-lg-6">
+                        <div class="feature-item d-flex align-items-start">
+                            <span class="feature-icon-emoji me-4">💬</span>
+                            <div>
+                                <!-- Example for one item -->
+                                <h3 class="fw-bold text-feature-blue">Honest Collaborations</h3>
+                                <p class="text-muted mb-0">
+                                    We believe in transparent partnerships built on trust and clear communication.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Real Partnerships -->
+                    <div class="col-lg-6">
+                        <div class="feature-item d-flex align-items-start">
+                            <span class="feature-icon-emoji me-4">🤝</span>
+                            <div>
+                                <h3 class="fw-bold text-feature-blue">Real Partnerships</h3>
+                                <p class="text-muted mb-0">
+                                    We're not just vendors - we're strategic partners invested in your brand's success.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Measurable Impact -->
+                    <div class="col-lg-6">
+                        <div class="feature-item d-flex align-items-start">
+                            <span class="feature-icon-emoji me-4">📈</span>
+                            <div>
+                                <h3 class="fw-bold text-feature-blue">Measurable Impact</h3>
+                                <p class="text-muted mb-0">
+                                    Every campaign comes with detailed analytics and performance insights.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Consumer Understanding -->
+                    <div class="col-lg-6">
+                        <div class="feature-item d-flex align-items-start">
+                            <span class="feature-icon-emoji me-4">🎯</span>
+                            <div>
+                                <h3 class="fw-bold text-feature-blue">Consumer Understanding</h3>
+                                <p class="text-muted mb-0">
+                                    Deep insights into what both brands and consumers need for authentic connections.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--              CONTACT US SECTION              -->
+        <!-- ============================================ -->
+        <section id="contact" class="py-5 d-none">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        
+                        <!-- Section Heading -->
+                        <h2 class="display-5 fw-bold mb-3">Ready to Make Some Noise?</h2>
+                        <p class="lead text-muted mb-5">
+                            Let's turn your next campaign into something unforgettable.
+                        </p>
+
+                        <!-- Modern Contact Form -->
+                        <form action="#" method="POST">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="contactName" placeholder="Your Name" required>
+                                <label for="contactName">Your Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="contactCompany" placeholder="Company">
+                                <label for="contactCompany">Company</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com" required>
+                                <label for="contactEmail">Email</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <textarea class="form-control" placeholder="What kind of ROAR are you looking for?" id="contactProject" style="height: 150px"></textarea>
+                                <label for="contactProject">Tell us about your project</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg">Let's Talk</button>
+                        </form>
+                        
+                        <p class="small text-muted mt-4">
+                            <strong>Coverage Area:</strong> From Perlis to Johor, Pahang to Kota Bharu — if there are people there, we're already planning something.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--           FIXED WHATSAPP BUTTON              -->
+        <!-- ============================================ -->
+        <a href="https://wa.me/60122909119" id="whatsapp-button" target="_blank" rel="noopener" title="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </main>
+
+    <!-- ============================================ -->
+    <!--                    FOOTER                    -->
+    <!-- ============================================ -->
+    <footer id="footer" class="py-4 ">
+        <div class="container text-center">
+            <!-- <p class="mb-0">&copy; 2024 Outroar Solutions. All Rights Reserved.</p> -->
+            <p class="mb-1">&copy; 2024 Outroar Solutions Sdn. Bhd. (202503021282) | Malaysia's Leading Youth Marketing Agency</p>
+            <p class="mb-1">📧 <u>hey@outroar.com.my</u> | Specializing in School Sampling, Hospital Outreach & Brand Activations</p>
+            <p class="mb-0"><small class="text-muted">Youth Marketing Malaysia | School Brand Activation | Hospital Sampling | Educational Marketing</small></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+     <!-- Swiper's JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- YOUR SCRIPT TO INITIALIZE SWIPER (IMPORTANT) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.client-swiper', {
+                // Optional parameters
+                loop: true,
+                slidesPerView: 2, // Start with 2 slides on mobile
+                spaceBetween: 20,
+
+                // Responsive breakpoints
+                breakpoints: {
+                    // when window width is >= 768px
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 30
+                    },
+                    // when window width is >= 992px
+                    992: {
+                        slidesPerView: 5,
+                        spaceBetween: 40
+                    }
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>

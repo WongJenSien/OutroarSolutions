@@ -1,0 +1,428 @@
+/* === GOOGLE FONT === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+/* === TIGER THEME: CSS VARIABLES & BOOTSTRAP OVERRIDES (Updated) === */
+:root {
+    /* Define our custom theme palette */
+    --brand-blue: #0D6EFD; /* A vibrant Bootstrap blue */
+    --brand-orange: #F97316;
+    --brand-black: #1C1917;
+    --light-background: #F8F9FA;
+    --white: #FFFFFF;
+    --floralwhite: #FFFAF0; /* A soft, warm white */
+    --warm-white-bg: #FFFAF0;
+
+
+    /* Override Bootstrap's default theme colors with our palette */
+    --bs-primary: var(--brand-orange); /* Primary color is now ORANGE */
+    --bs-dark: var(--brand-black);
+    --bs-body-font-family: 'Poppins', sans-serif;
+    --bs-body-color: var(--brand-black);
+    --bs-heading-color: var(--brand-orange); /* Headings remain ORANGE */
+    --bs-link-hover-color: var(--brand-orange); /* Links hover color is ORANGE */
+    --bs-border-radius: 0.5rem;
+}
+
+
+/* === GENERAL STYLES === */
+.fw-bolder {
+    font-weight: 800 !important;
+}
+
+/* === HEADER & NAVIGATION CUSTOMIZATION === */
+.logo {
+    height: 50px;
+}
+.navbar-nav .nav-link {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--bs-primary) !important;
+}
+
+/* ======================================= */
+/* === HERO SECTION WITH TIGER PATTERN === */
+/* ======================================= */
+#hero {
+    background-color: var(--floralwhite);
+    position: relative;
+    overflow: hidden; /* This is crucial for the background shape */
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -25%;
+    width: 60%;
+    height: 140%;
+    z-index: 0;
+    opacity: 0.07;
+    border-radius: 68% 32% 51% 49% / 54% 43% 57% 46%; /* Creates an organic "blob" shape */
+    
+    /* A subtle, custom-made SVG tiger stripe pattern */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 20 20'%3E%3Cpath fill='%231C1917' d='M16.2 6.8l-1.3-1.2c-.3-.3-.7-.3-1 0l-1.3 1.3c-.3.3-.3.7 0 1l1.3 1.3c.3.3.7.3 1 0l1.3-1.3c.3-.3.3-.7 0-1.1zM9.3 15.3l-1.3-1.3c-.3-.3-.7-.3-1 0l-1.3 1.3c-.3.3-.3.7 0 1l1.3 1.3c.3.3.7.3 1 0l1.3-1.3c.3-.3.3-.7 0-1zM4.6 6.8L3.3 5.6c-.3-.3-.7-.3-1 0L1 6.9c-.3.3-.3.7 0 1l1.3 1.3c.3.3.7.3 1 0l1.3-1.3c.3-.3.3-.7 0-1.1z'/%3E%3C/svg%3E");
+    background-size: 40px;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out; /* This makes the hover effect smooth */
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px); /* The "lift" effect */
+    box-shadow: 0 10px 20px -10px var(--tiger-orange); 
+}
+
+.btn-outline-dark:hover {
+    transform: translateY(-3px); /* The "lift" effect */
+    box-shadow: 0 10px 20px -10px var(--tiger-black); 
+}
+
+/* =========================================== */
+/* === SERVICES SECTION CARD CUSTOMIZATION === */
+/* =========================================== */
+#services {
+    background-color: var(--warm-white-bg); 
+    position: relative; 
+    overflow: hidden;
+}
+
+#services::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+
+    /* 1. Mirrored Position: from right to left */
+    top: -20%;
+    left: -25%; /* The key change: from 'right' to 'left' */
+
+    /* 2. Shape and Pattern (same as hero for consistency) */
+    width: 60%;
+    height: 140%;
+    opacity: 0.07;
+
+    /* 3. Flipped border-radius for a true mirror effect */
+    border-radius: 32% 68% 49% 51% / 54% 43% 57% 70%;
+    
+    /* 4. Same SVG pattern */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 20 20'%3E%3Cpath fill='%231C1917' d='M16.2 6.8l-1.3-1.2c-.3-.3-.7-.3-1 0l-1.3 1.3c-.3-.3-.3.7 0 1l1.3 1.3c.3.3.7.3 1 0l1.3-1.3c.3-.3.3-.7 0-1.1zM9.3 15.3l-1.3-1.3c-.3-.3-.7-.3-1 0l-1.3 1.3c-.3.3-.3.7 0 1l1.3 1.3c.3.3.7.3 1 0l1.3-1.3c.3-.3.3-.7 0-1zM4.6 6.8L3.3 5.6c-.3-.3-.7-.3-1 0L1 6.9c-.3.3-.3.7 0 1l1.3 1.3c.3.3.7.3 1 0l1.3-1.3c.3-.3.3-.7 0-1.1z'/%3E%3C/svg%3E");
+    background-size: 40px;
+
+    /* background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231C1917' fill-opacity='1'%3E%3Cellipse cx='50' cy='65' rx='25' ry='20'/%3E%3Ccircle cx='35' cy='35' r='7'/%3E%3Ccircle cx='50' cy='25' r='7'/%3E%3Ccircle cx='65' cy='35' r='7'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 70px; */
+}
+
+#services .container {
+    position: relative;
+    z-index: 1;
+}
+
+.custom-card {
+    border: 1px solid #dee2e6;
+    border-radius: var(--bs-border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--bs-primary);
+}
+
+.custom-card i {
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover i {
+    transform: scale(1.1);
+}
+
+/* ================================== */
+/* === WHY BRANDS LOVE US SECTION === */
+/* ================================== */
+#why-us {
+    background-color: var(--light-gray-bg);
+}
+
+#why-us h2, 
+#why-us h4 {
+    font-weight: 700;
+}
+
+#why-us .display-4 {
+    color: var(--brand-black);
+    font-weight: 700;
+}
+
+#why-us .display-4 + p {
+    color: var(--brand-black);
+    font-weight: 500;
+}
+
+/* === Client Logo Cards in Why Us Section === */
+.client-swiper {
+    padding-top: 1rem;
+}
+
+/* Remove default styling from the slide itself */
+.client-swiper .swiper-slide {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: grab;
+    background: none; /* Remove background from the slide */
+    height: auto;     /* Let card determine height */
+    padding: 0;       /* Remove padding from the slide */
+}
+
+/* This is now the main visual element */
+#why-us .client-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--bs-border-radius);
+    height: 160px; /* Consistent height for all cards */
+    border: 1px solid var(--bs-border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#why-us .client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-color: var(--bs-primary);
+}
+
+/* Reset the logo image styles for original colors */
+#why-us .client-logo-img {
+    max-width: 120px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    filter: none; /* IMPORTANT: Removes the white filter */
+    opacity: 1;
+}
+
+/* Style the client name text */
+#why-us .client-name {
+    color: var(--brand-black);
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* Make navigation arrows dark */
+#why-us .swiper-button-next,
+#why-us .swiper-button-prev {
+    color: var(--brand-black);
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+#why-us .swiper-button-next:hover,
+#why-us .swiper-button-prev:hover {
+    opacity: 1;
+}
+
+/* ================================ */
+/* === OUR SECRET SAUCE SECTION === */
+/* ================================ */
+#secret-sauce {
+    background-color: var(--warm-white-bg);
+}
+
+.feature-item {
+    /* --- This turns the container into a card --- */
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--bs-border-radius);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    height: 100%; /* Ensures cards in the same row are equal height */
+}
+
+.feature-item:hover {
+    /* --- Adds the hover effect --- */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+    border-color: var(--bs-primary);
+}
+
+.feature-icon-emoji {
+    /* --- Styles the emoji icon inside the card --- */
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.feature-item h3 {
+    /* --- Adjusts spacing for the title --- */
+    margin-bottom: 0.75rem;
+}
+
+/* ================================= */
+/* ===    Contect Us Section    ===  */
+/* ================================= */
+
+
+#contact .container {
+    position: relative;
+    z-index: 1;
+}
+
+#contact h2 {
+    color: var(--brand-orange);
+}
+
+/* --- 2. Style the Modern Form --- */
+#contact .form-control {
+    background-color: var(--white);
+    border: 1px solid var(--bs-border-color);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+#contact .form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Bootstrap's default focus ring */
+}
+
+/* Style for Bootstrap's floating labels */
+#contact .form-floating > label {
+    color: #6c757d;
+}
+
+
+/* ==================================== */
+/* === Campaign Modal Customization === */
+/* ==================================== */
+#campaignModal .modal-content {
+    /* Uses a solid, strong orange background */
+    background-color: #F97316; 
+    color: white;
+    border: none;
+    border-radius: var(--bs-border-radius);
+}
+
+#campaignModal h2,
+#campaignModal h4 {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+#campaignModal .lead {
+    color: white;
+    font-weight: 500;
+}
+
+#campaignModal .modal-header,
+#campaignModal .modal-footer {
+    border: none;
+}
+
+#campaignModal .modal-body {
+    padding: 2rem 2.5rem;
+}
+
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Standardized padding for better balance in a wider card */
+    padding: 1.5rem; 
+    border-radius: var(--bs-border-radius);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-card p {
+    margin-bottom: 0;
+}
+
+.stat-card .display-5 {
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.25rem !important;
+}
+
+.stat-card .small {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#campaignModal .small strong {
+    font-weight: 700;
+    color: white;
+}
+
+
+
+#whatsapp-button {
+    /* --- Positioning --- */
+    position: fixed; /* This is the key to keeping it in place */
+    bottom: 25px;    /* 25px from the bottom */
+    right: 25px;     /* 25px from the right */
+    z-index: 1000;   /* Ensures it's on top of all other content */
+
+    /* --- Styling --- */
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: #FFFFFF;            /* White icon color */
+    width: 60px;               /* Button width */
+    height: 60px;              /* Button height */
+    border-radius: 50%;        /* Makes it a perfect circle */
+    text-decoration: none;     /* Removes the default link underline */
+    
+    /* --- Centering the Icon --- */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* --- Effects --- */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Icon Styling --- */
+#whatsapp-button i {
+    font-size: 32px;
+}
+
+/* --- Hover Effect --- */
+#whatsapp-button:hover {
+    transform: scale(1.1) translateY(-5px); /* Lifts and enlarges the button */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ================================= */
+/* ===         Footer            === */
+/* ================================= */
+#footer {
+    /* background-color: var(--brand-orange); */
+    background-color: #ffcc80; /* A lighter, warm orange */
+    color: var(--brand-black);
+    padding: 1.5rem 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Bootstrap Style */
+.opacity-70 {
+    opacity: 0.7 !important;
+}

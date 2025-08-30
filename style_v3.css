@@ -1,0 +1,150 @@
+/* ===================================================================
+   OUTROAR SOLUTIONS - CUSTOM STYLESHEET (V4 - SIMPLE & CLEAN)
+   =================================================================== */
+
+/* === 1. GLOBAL STYLES & THEME === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --brand-blue: #0D6EFD;
+    --brand-orange: #F97316;
+    --brand-black: #18181b;
+    --light-gray-bg: #F8F9FA;
+    --white: #FFFFFF;
+
+    --bs-primary: var(--brand-blue);
+    --bs-dark: var(--brand-black);
+    --bs-body-font-family: 'Poppins', sans-serif;
+    --bs-body-color: #52525b; /* Softer gray for paragraphs */
+    --bs-heading-color: var(--brand-orange);
+    --bs-border-radius: 0.75rem;
+    --bs-border-color: #e4e4e7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--brand-black);
+}
+section h2 {
+    font-weight: 700;
+}
+.btn {
+    font-weight: 600;
+    padding: 0.8rem 1.8rem;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px -5px rgba(13, 110, 253, 0.4);
+}
+
+/* === 2. SECTION BACKGROUNDS & COLORS === */
+/* This is the core of the new clean design */
+#hero, #services, #secret-sauce {
+    background-color: var(--light-gray-bg);
+}
+#introduction {
+    background-color: var(--white);
+}
+#why-us {
+    background-color: var(--brand-orange);
+}
+footer {
+    background-color: var(--brand-black);
+}
+
+/* === 3. HEADER & NAVIGATION === */
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--bs-border-color);
+}
+.logo { height: 40px; }
+
+/* === 4. SERVICES SECTION === */
+.service-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--bs-border-radius);
+    border: 1px solid var(--bs-border-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: all .3s ease;
+    text-align: left;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-color: var(--bs-primary);
+}
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+.service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+/* === 5. WHY US SECTION (SOLID ORANGE) === */
+/* Text color adjustments for the orange background */
+#why-us h2, #why-us h4, #why-us .display-4, #why-us .display-4 + p, #why-us .client-name {
+    color: var(--white);
+}
+#why-us h2, #why-us h4 {
+    opacity: 0.8; /* Make titles slightly softer */
+}
+
+/* === 6. CLIENT LOGO SWIPER === */
+.client-swiper .swiper-slide {
+    -webkit-user-select: none; user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: grab;
+}
+.client-swiper .client-card { /* Card style for the orange section */
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    height: 150px;
+    padding: 1.5rem;
+}
+.client-logo-img {
+    max-width: 120px;
+    max-height: 50px;
+    width: auto; height: auto;
+    filter: brightness(0) invert(1); /* Makes logos white for contrast */
+    opacity: 0.8;
+    transition: all .3s ease;
+}
+.client-swiper .client-card:hover .client-logo-img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+.client-swiper .swiper-button-next,
+.client-swiper .swiper-button-prev {
+    color: var(--white);
+}
+
+/* === 7. SECRET SAUCE SECTION === */
+.feature-item h3 {
+    margin-bottom: .5rem;
+}
+.feature-icon-emoji {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+/* === 8. CAMPAIGN MODAL (UNCHANGED) === */
+#campaignModal .modal-content { background-color: var(--brand-orange); color: white; border: none; }
+#campaignModal .modal-header, #campaignModal .modal-footer { border: none; }
+#campaignModal h2, #campaignModal h4 { color: rgba(255, 255, 255, 0.5); }
+#campaignModal .lead { color: white; font-weight: 500; }
+.stat-card { background-color: rgba(255, 255, 255, 0.2); padding: 1.5rem; border-radius: var(--bs-border-radius); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.stat-card .display-5 { font-weight: 800; margin-bottom: 0.25rem !important; }
+.stat-card .small { font-weight: 500; color: rgba(255, 255, 255, 0.9); }
+#campaignModal .small strong { font-weight: 700; color: white; }
+
+/* === 9. FOOTER === */
+footer {
+    color: rgba(255,255,255,0.7);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}

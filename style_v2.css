@@ -1,0 +1,216 @@
+/* ===================================================================
+   OUTROAR SOLUTIONS - CUSTOM STYLESHEET (V3 - THEMED BACKGROUNDS)
+   =================================================================== */
+
+/* === 1. GLOBAL STYLES & THEME === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --brand-blue: #0D6EFD;
+    --brand-orange: #F97316;
+    --brand-black: #18181b; /* A richer, deeper black */
+    --light-gray-bg: #F8F9FA;
+    --white: #FFFFFF;
+
+    --bs-primary: var(--brand-blue);
+    --bs-dark: var(--brand-black);
+    --bs-body-font-family: 'Poppins', sans-serif;
+    --bs-body-color: #52525b; /* Softer gray for paragraphs */
+    --bs-heading-color: var(--brand-orange);
+    --bs-border-radius: 0.75rem;
+    --bs-border-color: #e4e4e7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--brand-black);
+}
+section h2 {
+    font-weight: 700;
+}
+.btn {
+    font-weight: 600;
+    padding: 0.8rem 1.8rem;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px -5px rgba(13, 110, 253, 0.4);
+}
+
+/* === 2. HEADER & NAVIGATION === */
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--bs-border-color);
+}
+.logo { height: 40px; }
+
+/* === 3. SECTION BACKGROUND PREPARATION === */
+/* Prepare all sections to hold a background layer */
+#hero, #introduction, #services, #why-us, #secret-sauce {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+/* Base style for all background layers */
+#hero::before, #introduction::before, #services::before, #why-us::before, #secret-sauce::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+/* === 4. HERO SECTION BACKGROUND (UNCHANGED) === */
+#hero {
+    background-color: var(--light-gray-bg);
+}
+#hero::before {
+    top: -20%; right: -25%;
+    width: 60%; height: 140%;
+    opacity: 0.05;
+    border-radius: 68% 32% 51% 49% / 54% 43% 57% 46%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 20 20'%3E%3Cpath fill='%231C1917' d='M16.2 6.8l-1.3-1.2c-.3-.3-.7-.3-1 0l-1.3 1.3c-.3.3-.3.7 0 1l1.3 1.3c.3.3.7.3 1 0l1.3-1.3c.3-.3.3-.7 0-1.1zM9.3 15.3l-1.3-1.3c-.3-.3-.7-.3-1 0l-1.3 1.3c-.3.3-.3.7 0 1l1.3 1.3c.3.3.7.3 1 0l1.3-1.3c.3-.3.3-.7 0-1zM4.6 6.8L3.3 5.6c-.3-.3-.7-.3-1 0L1 6.9c-.3.3-.3.7 0 1l1.3 1.3c.3.3.7.3 1 0l1.3-1.3c.3-.3.3-.7 0-1.1z'/%3E%3C/svg%3E");
+    background-size: 40px;
+}
+
+/* === 5. INTRODUCTION SECTION BACKGROUND === */
+/* A solid white section, providing a clean "visual pause". */
+#introduction {
+    background-color: var(--white);
+}
+
+/* === 6. SERVICES SECTION BACKGROUND === */
+/* Subtle, modern "claw mark" texture. */
+#services {
+    background-color: var(--light-gray-bg);
+}
+#services::before {
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-48 0c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z' fill='%23d1d5db' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* === 7. WHY US SECTION BACKGROUND === */
+/* A powerful, solid orange section with a dark, subtle pattern. */
+#why-us {
+    background-color: var(--brand-orange);
+    color: var(--white);
+}
+#why-us::before {
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 1;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+#why-us h2, #why-us h4, #why-us .display-4, #why-us .display-4 + p, #why-us .client-name {
+    color: var(--white);
+}
+#why-us h2, #why-us h4 {
+    opacity: 0.7;
+}
+#why-us .client-card { /* Updated card style for orange background */
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+}
+#why-us .swiper-button-next,
+#why-us .swiper-button-prev {
+    color: var(--white);
+}
+
+/* === 8. SECRET SAUCE SECTION BACKGROUND === */
+/* A dramatic, dark background with glowing orange accents. */
+#secret-sauce {
+    background-color: var(--brand-black);
+}
+#secret-sauce::before {
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0.1;
+    background-image: url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-20 620c60-100 150-200 250-250s200-80 300-20m-200 450c50-100 120-200 220-250s180-80 280-20' stroke='%23F97316' stroke-width='30' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#secret-sauce h2 { color: var(--brand-orange); }
+#secret-sauce h3 { color: var(--white); }
+#secret-sauce p { color: rgba(255,255,255,0.7); }
+
+/* === 9. FOOTER === */
+footer {
+    background-color: var(--white);
+    border-top: 1px solid var(--bs-border-color);
+    color: var(--bs-body-color);
+}
+
+/* === Campaign Modal Customization === */
+#campaignModal .modal-content {
+    /* Uses a solid, strong orange background */
+    background-color: #F97316; 
+    color: white;
+    border: none;
+    border-radius: var(--bs-border-radius);
+}
+
+/* Make the main headlines subtle and transparent */
+#campaignModal h2,
+#campaignModal h4 {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Style the main description text */
+#campaignModal .lead {
+    color: white;
+    font-weight: 500;
+}
+
+#campaignModal .modal-header,
+#campaignModal .modal-footer {
+    border: none;
+}
+
+#campaignModal .modal-body {
+    padding: 2rem 2.5rem;
+}
+
+/* Style the stat cards */
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Standardized padding for better balance in a wider card */
+    padding: 1.5rem; 
+    border-radius: var(--bs-border-radius);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the text elements inside the card */
+.stat-card p {
+    margin-bottom: 0;
+}
+
+.stat-card .display-5 {
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.25rem !important;
+}
+
+.stat-card .small {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#campaignModal .small strong {
+    font-weight: 700;
+    color: white;
+}
+
+/* --- All remaining specific component styles --- */
+.service-card {
+    background-color: var(--white); padding: 2rem; border-radius: var(--bs-border-radius); border: 1px solid var(--bs-border-color); box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: all .3s ease; text-align: left;
+}
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); border-color: var(--bs-primary); }
+.service-icon { font-size: 2.5rem; margin-bottom: 1rem; line-height: 1; }
+.service-card h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+.client-swiper .swiper-slide { -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; cursor: grab; }
+.client-logo-img { max-width: 120px; max-height: 50px; width: auto; height: auto; transition: all .3s ease; }
+.client-swiper .swiper-slide:hover .client-logo-img { transform: scale(1.1); }
+.feature-item h3 { margin-bottom: .5rem; }
+.feature-icon-emoji { font-size: 2.5rem; line-height: 1; }

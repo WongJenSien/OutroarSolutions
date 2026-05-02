@@ -92,7 +92,8 @@
 /* === SERVICES SECTION CARD CUSTOMIZATION === */
 /* =========================================== */
 #services {
-    background-color: var(--warm-white-bg); 
+    /* background-color: var(--warm-white-bg);  */
+    background-color: var(--light-gray-bg);
     position: relative; 
     overflow: hidden;
 }
@@ -152,7 +153,8 @@
 /* === WHY BRANDS LOVE US SECTION === */
 /* ================================== */
 #why-us {
-    background-color: var(--light-gray-bg);
+    /* background-color: var(--light-gray-bg); */
+    background-color: var(--warm-white-bg);
 }
 
 #why-us h2, 

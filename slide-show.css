@@ -1,0 +1,59 @@
+#photos {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#photos h2 {
+    color: #007bff;
+    margin-bottom: 25px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden; /* Hide overflowing images */
+    border-radius: 5px;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+    height: 450px; /* Fixed height for the slideshow area */
+    display: flex; /* Use flexbox to align images */
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow-image {
+    display: none; /* Hidden by default, shown by JS */
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure image fits without cropping, maintaining aspect ratio */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slideshow-image.active {
+    display: block; /* Show the active image */
+}
+
+.slideshow-controls {
+    margin-top: 20px;
+}
+
+.slideshow-controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.slideshow-controls button:hover {
+    background-color: #0056b3;
+}
